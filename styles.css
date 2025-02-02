@@ -1,0 +1,215 @@
+/* 기본 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 전체 폰트, 배경 */
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #0f0f17; /* 어두운 배경으로 하이테크 느낌 */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* 헤더 영역 */
+  header {
+    background-color: #1c1b36;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  /* 헤더 내부 컨테이너: 햄버거 메뉴 + 로고를 가로로 배치 */
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* 햄버거 메뉴 */
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 0.3s;
+  }
+  .hamburger-menu:hover {
+    transform: scale(1.1);
+  }
+  .hamburger-menu span {
+    background-color: #ffffff;
+    height: 3px;
+    width: 100%;
+    margin: 4px 0;
+    display: block;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+  }
+  .hamburger-menu:hover span {
+    background-color: #4ac6ff; /* 강조 컬러 */
+  }
+  
+  /* 로고 링크 */
+  .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* 로고에는 밑줄 제거 */
+  }
+  
+  /* 헤더의 로고 이미지 크기 설정 (작게) */
+  .header-logo {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    margin-left: 10px; /* 햄버거 메뉴와의 간격 */
+  }
+  
+  /* 메뉴 (햄버거 펼쳤을 때) */
+  .menu {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: rgba(25, 25, 46, 0.9);
+    list-style: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .menu li {
+    padding: 10px 20px;
+  }
+  .menu li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .menu li:hover {
+    background-color: #4ac6ff;
+  }
+  .menu-active {
+    transform: translateX(0);
+  }
+  
+  /* 메인 컨텐츠 */
+  main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* 히어로 섹션 */
+  .hero {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    color: #4ac6ff;
+    margin-bottom: 10px;
+  }
+  .hero-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* 섹션 공통 */
+  section {
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4ac6ff;
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  /* intro-section (index.html) */
+  .intro-section {
+    margin-top: 60px;
+    text-align: center;
+  }
+  .intro-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .intro-images img {
+    width: 250px;
+    border-radius: 6px;
+  }
+  
+  /* 푸터 */
+  footer {
+    background-color: #1c1b36;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+  }
+  .blog-link {
+    color: #4ac6ff;
+    text-decoration: none;
+  }
+  .blog-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* 폼 자체를 세로배치 */
+.contact-form-section form {
+    display: flex;
+    flex-direction: column; 
+    max-width: 400px;      /* 폼 최대 너비 예시 */
+    margin: 0 auto;        /* 중앙 정렬 */
+  }
+  
+  /* 필드 그룹 공통 스타일 */
+  .form-field {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 20px;   /* 필드 간 간격 */
+  }
+  
+  /* 라벨과 입력 요소 스타일 */
+  .form-field label {
+    margin-bottom: 8px;    /* 라벨과 input 사이의 공간 */
+    font-weight: bold;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* 버튼 스타일 */
+  .contact-form-section form button {
+    align-self: flex-start; /* 버튼을 왼쪽 정렬할 경우 */
+    background-color: #4ac6ff;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .contact-form-section form button:hover {
+    background-color: #399ecf;
+  }
+  

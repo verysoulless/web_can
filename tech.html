@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAN - Leading Automotive Display Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <!-- 헤더 내 컨테이너 (햄버거 + 로고) -->
+    <div class="header-content">
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- 로고를 누르면 홈(index.html)으로 이동 -->
+      <a href="index.html" class="logo-link">
+        <img src="images/can_logo.jpg" alt="CAN 로고" class="header-logo" />
+      </a>
+    </div>
+    
+    <!-- 햄버거 메뉴가 클릭되면 보여지는 메뉴 리스트 -->
+    <ul class="menu" id="menu">
+      <li><a href="about.html">회사 소개</a></li>
+      <li><a href="tech.html">기술 소개</a></li>
+      <li><a href="contact.html">문의하기</a></li>
+      <li><a href="https://blog.naver.com/cancoltd" target="_blank" class="blog-link">Blog</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="tech-hero">
+      <h1>기술 소개</h1>
+      <p class="subtitle">
+        CAN의 핵심 기술과 특화 솔루션을 만나보세요.
+      </p>
+    </section>
+    <img src="images/web_cg.png" alt="Cover Glass">
+    <img src="images/web_touch.png" alt="Capacitance Touch Panel">
+
+    <section class="tech-details">
+      <h2>차별화된 기술 역량</h2>
+      <ul>
+        <li>고내구성 디스플레이 기구 설계 기술</li>
+        <li>광학 설계 및 빛 반사/산란 제어 기술</li>
+        <li>고해상도 터치 패널 생산 노하우</li>
+        <li>정밀 금형 및 디스플레이 커버 글라스(Cover Glass) 가공</li>
+      </ul>
+    </section>
+
+    <img src="images/web_qd.png" alt="Quantum Dot">
+    <img src="images/web_quartz.png" alt="Crystal Quartz">
+</main>
+
+
+  <footer>
+    <p>&copy; 2013 CAN., CO. Ltd. All Rights Reserved.</p>
+    <!-- Footer에 Blog 링크 추가 -->
+    <p>
+      <a href="https://blog.naver.com/cancoltd" target="_blank" class="blog-link"
+        >Blog</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('menu-active');
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('menu');
+      const hamburger = document.querySelector('.hamburger-menu');
+      if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove('menu-active');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAN - Leading Automotive Display Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <!-- 헤더 내 컨테이너 (햄버거 + 로고) -->
+    <div class="header-content">
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- 로고를 누르면 홈(index.html)으로 이동 -->
+      <a href="index.html" class="logo-link">
+        <img src="images/can_logo.jpg" alt="CAN 로고" class="header-logo" />
+      </a>
+    </div>
+    
+    <!-- 햄버거 메뉴가 클릭되면 보여지는 메뉴 리스트 -->
+    <ul class="menu" id="menu">
+      <li><a href="about.html">회사 소개</a></li>
+      <li><a href="tech.html">기술 소개</a></li>
+      <li><a href="contact.html">문의하기</a></li>
+      <li><a href="https://blog.naver.com/cancoltd" target="_blank" class="blog-link">Blog</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <h1>회사 소개</h1>
+      <p class="subtitle">
+        CAN은 디스플레이 전문 부품 공급사로서,<br>
+        특히 자동차 분야(Automotive)에서<br>
+        높은 내구성과 광학 기술을 제공해온<br>
+        풍부한 경험을 자랑합니다.
+      </p>
+    </section>
+
+    <img src="images/web_history.png" alt="milestone" >
+
+    <!-- 연혁 섹션 -->
+    <section class="history-section">
+      <h2>연혁</h2>
+      <ul class="history-list">
+        <li>'13.10 CNDisplay 설립</li>
+        <li>'14.10 현대기아향 6.1” LCD 양산공급</li>
+        <li>'15.3 두산인프라코어향 8” 터치 패널 양산</li>
+        <li>'16.1 현대기아향 7” 터치 패널 양산공급</li>
+        <li>'17.11 Chrysler향 8.4” 터치패널 양산</li>
+        <li>'18.4 AUDI향 10.1”, 8.8” 터치패널 양산</li>
+        <li>'20.10 현대향 10.3” LCD 양산 공급</li>
+        <li>'22. 제네시스향 27\" OLED용 CG 양산 공급</li>
+        <li>'23.03 기아차향 멀티디스플레이 CG 양산</li>
+      </ul>
+    </section>
+
+    <!-- 회사 강점 섹션 -->
+    <section class="strengths-section">
+      <h2>회사 강점</h2>
+      <p>
+        CAN은 오랫동안 자동차용 디스플레이 부품을 개발 및 공급해온 노하우를 갖추고 있습니다.
+        <br>특히 <strong>기구 설계</strong>, <strong>광학 설계</strong>, 그리고 <strong>고내구성 소재</strong>에 대한 전문성을 바탕으로
+        고객사 요구에 맞춰 최적의 솔루션을 제공합니다.
+      </p>
+      <ul>
+        <li>자동차용 고내구성 디스플레이 설계 역량</li>
+        <li>차량용 터치 패널 &amp; 커버 글라스(Cover Glass) 기술</li>
+        <li>다양한 글로벌 OEM사와의 협업 경험</li>
+        <li>짧은 개발 기간과 대량 양산 대응 노하우</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2013 CAN., CO. Ltd. All Rights Reserved.</p>
+    <!-- Footer에 Blog 링크 추가 -->
+    <p>
+      <a href="https://blog.naver.com/cancoltd" target="_blank" class="blog-link"
+        >Blog</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('menu-active');
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('menu');
+      const hamburger = document.querySelector('.hamburger-menu');
+      if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove('menu-active');
+      }
+    });
+  </script>
+</body>
+</html>
